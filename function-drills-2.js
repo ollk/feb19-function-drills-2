@@ -42,3 +42,36 @@ function decode(word) {
   }
   else {return ' ';}
 }
+
+
+function howManyDays(month, leapYear) {
+  if (leapYear === true && month === 'February') {
+    return 'February has 29 days';
+  }
+  else {
+    let days = '';
+    switch(month) {
+    case 'January':
+    case 'March':
+    case 'May':
+    case 'July':
+    case 'August':
+    case 'October':
+    case 'December':
+      days = 'has 31 days';
+      break;
+    case 'April':
+    case 'June':
+    case 'September':
+    case 'November':
+      days = 'has 30 days';
+      break;
+    case 'February':
+      days = 'has 28 days';
+      break;
+    default:
+      throw Error('Must provide a valid month');
+    }
+    return `${month} ${days}`;
+  }
+}
