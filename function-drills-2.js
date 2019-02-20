@@ -11,3 +11,17 @@ function jediName(firstName, lastName) {
 }
 
 jediName('Scott', 'Williams');
+
+
+function beyond(num) {
+  if (isFinite(num) === true) {
+    if (Math.sign(num) === 1) {
+      console.log('To infinity');
+    }
+    else if (Math.sign(num) === -1) {
+      console.log('To negative infinity');
+    }
+    else {console.log('Staying home');}
+  }
+  else {console.log('And beyond');}
+}
